@@ -8,9 +8,14 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   generateSymbol();
-  setInterval(() => {
+  let timer = setInterval(() => {
     generateSymbol();
-  }, 3000);
+  }, 10000);
+  let buttons = document.getElementsByTagName("button");
+  buttons[0].addEventListener("click", e => {
+    generateSymbol();
+    clearInterval(timer);
+  });
 };
 let symbol = ["♠", "♣", "♥", "♦"];
 

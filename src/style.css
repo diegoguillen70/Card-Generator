@@ -52,7 +52,7 @@ body {
   font-size: 175px;
 }
 
-.button {
+button {
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
@@ -65,5 +65,15 @@ body {
   margin: 60px;
 }
 
+button:hover {
+  background-color: #c5100a;
+}
+
 input {
+  width: 15%;
+  padding: 8px 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }

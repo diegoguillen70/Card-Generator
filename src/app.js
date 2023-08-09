@@ -45,7 +45,7 @@ window.onload = function() {
     element.addEventListener("click", e => {
       if (e.target.className === "btn-generate") {
         generateSymbol();
-        clearInterval(timer);
+        //clearInterval(timer);
       }
       if (e.target.className === "btn-resize") {
         let setWidth = document.getElementById("input-width").value;

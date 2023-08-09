@@ -43,27 +43,28 @@ window.onload = function() {
   let buttons = document.getElementsByTagName("button");
   for (const element of buttons) {
     element.addEventListener("click", e => {
-      let isBtnGenerator = e.target.className === "btn-generate";
-      if (isBtnGenerator) {
+      if (e.target.className === "btn-generate") {
         generateSymbol();
         clearInterval(timer);
       }
-      let setWidth = document.getElementById("input-width").value;
-      let setHeight = document.getElementById("input-height").value;
-      setWidth *= 10;
-      setHeight *= 10;
-      //less size w=350 h=350 max w=1000 h=1000
-      if (
-        setWidth != "" &&
-        setHeight != "" &&
-        setWidth >= 350 &&
-        setHeight >= 350
-      ) {
-        let selectCard = document.getElementById("card");
-        selectCard.style.width = `${setWidth}px`;
-        selectCard.style.height = `${setHeight}px`;
-      } else {
-        alert("input size is not valid");
+      if (e.target.className === "btn-resize") {
+        let setWidth = document.getElementById("input-width").value;
+        let setHeight = document.getElementById("input-height").value;
+        setWidth *= 10;
+        setHeight *= 10;
+        //less size w=350 h=350 max w=1000 h=1000
+        if (
+          setWidth != "" &&
+          setHeight != "" &&
+          setWidth >= 400 &&
+          setHeight >= 400
+        ) {
+          let selectCard = document.getElementById("card");
+          selectCard.style.width = `${setWidth}px`;
+          selectCard.style.height = `${setHeight}px`;
+        } else {
+          alert("input size is not valid");
+        }
       }
     });
   }

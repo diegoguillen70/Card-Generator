@@ -11,7 +11,7 @@ window.onload = function() {
   generateSymbol();
   let timer = setInterval(() => {
     generateSymbol();
-  }, 10000);
+  }, 10001);
   function generateSymbol() {
     let randomSymbol = Math.floor(Math.random() * 4);
     let randomNumber = [
